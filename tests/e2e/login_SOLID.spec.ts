@@ -1,3 +1,4 @@
+import '../../config/env.config';
 /*
 import{test, expect} from '@playwright/test';
 import { LoginPage_SOLID } from '../../pages/LoginPage_SOLID';
