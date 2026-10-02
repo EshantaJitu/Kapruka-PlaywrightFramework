@@ -28,11 +28,20 @@ export class LanguagePage extends BasePage_SOLID
        this.page.waitForLoadState('load'),
        this.languageDropDown.selectOption({label: language})
     ]);
- }
-
- async verifyLanguage(expected: string): Promise<void>
+   }
+ async verifyLanguage(expected: 'සිං' | 'Eng'): Promise<void>    
  {
-    await expect(this.languageDropDown).toHaveValue(expected);
+   const selectedOption =
+      this.languageDropDown.locator('option:checked');
+
+   await expect(selectedOption).toHaveText(expected);
+   
  }
  
 }
+
+
+
+
+
+
