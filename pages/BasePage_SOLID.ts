@@ -27,8 +27,19 @@ async fill(locator: Locator, value: string): Promise <void>  //generic methor fo
    await locator.waitFor({state: 'visible'})
    await locator.fill(value);  
 }
-abstract isLoaded(): Promise<void>;
 
+async select(locator: Locator, value: string): Promise<void>
+{
+   await locator.waitFor({state:'visible'})
+   await locator.selectOption(value)
+}
+
+async scrollToElement(element: Locator): Promise<void>
+{
+   await element.scrollIntoViewIfNeeded();
+}
+
+abstract isLoaded(): Promise<void>;
 
 
 }

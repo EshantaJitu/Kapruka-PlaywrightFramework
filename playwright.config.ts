@@ -28,6 +28,8 @@ export default defineConfig({
     screenshot: 'only-on-failure', //screenshot automatically on failure
 
     trace: 'on',
+    //generate a trace for every test //stored
+    //test results/ <testname>/trace.zip
   },
 
   projects: [
